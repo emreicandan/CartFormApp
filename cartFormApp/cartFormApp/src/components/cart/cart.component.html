@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of cartService.getUserCart()?.items">
+            <div class="card">
+                <img class="card-img-top" [src]="item.image.small" alt="Title" />
+                <div class="card-body">
+                    <h4 class="card-title">{{item.productName}}</h4>
+                    <p class="card-text">{{item.productPrice}}</p>
+                </div>
+                <div>
+                    <button (click)="cartService.inCrase(item.productId)"><ng-icon class="ico" name="heroArrowUp"></ng-icon></button>
+                    <p class="ms-2 mt-3">{{item.count}}</p>
+                    <button (click)="cartService.deCrease(item.productId)"><ng-icon class="ico" name="heroArrowDown"></ng-icon></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

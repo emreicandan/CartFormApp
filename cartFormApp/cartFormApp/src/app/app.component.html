@@ -1,0 +1,29 @@
+<nav
+class="navbar navbar-expand-sm navbar-light bg-light"
+>
+<div class="container">
+  <a class="navbar-brand text-success" [routerLink]="['/']">ShoeHub.com</a>
+  <button
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+      <li>
+        <a class="ms-auto" [routerLink]="['/cart']"><ng-icon class="ico" name="heroShoppingCart"></ng-icon></a>
+      </li>
+      <div *ngFor="let item of">
+      </div>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<router-outlet></router-outlet>
